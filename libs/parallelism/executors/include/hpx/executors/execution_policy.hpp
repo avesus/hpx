@@ -114,7 +114,7 @@ namespace hpx { namespace execution {
 #endif
                 "hpx::traits::is_executor_any<Executor>::value");
 
-            return hpx::parallel::execution::create_rebound_policy::call(
+            return hpx::parallel::execution::create_rebound_policy(
                 *this, std::forward<Executor>(exec), parameters());
         }
 
@@ -136,7 +136,7 @@ namespace hpx { namespace execution {
         template <typename... Parameters>
         constexpr decltype(auto) with(Parameters&&... params) const
         {
-            return hpx::parallel::execution::create_rebound_policy::call(*this,
+            return hpx::parallel::execution::create_rebound_policy(*this,
                 executor(),
                 parallel::execution::join_executor_parameters(
                     std::forward<Parameters>(params)...));
@@ -168,7 +168,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -258,7 +258,7 @@ namespace hpx { namespace execution {
 #endif
                 "hpx::traits::is_executor_any<Executor>::value");
 
-            return hpx::parallel::execution::create_rebound_policy::call(
+            return hpx::parallel::execution::create_rebound_policy(
                 *this, std::forward<Executor_>(exec), parameters());
         }
 
@@ -280,7 +280,7 @@ namespace hpx { namespace execution {
         template <typename... Parameters_>
         constexpr decltype(auto) with(Parameters_&&... params) const
         {
-            return hpx::parallel::execution::create_rebound_policy::call(*this,
+            return hpx::parallel::execution::create_rebound_policy(*this,
                 executor(),
                 parallel::execution::join_executor_parameters(
                     std::forward<Parameters_>(params)...));
@@ -329,7 +329,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -421,7 +421,7 @@ namespace hpx { namespace execution {
 #endif
                 "hpx::traits::is_executor_any<Executor>::value");
 
-            return hpx::parallel::execution::create_rebound_policy::call(
+            return hpx::parallel::execution::create_rebound_policy(
                 *this, std::forward<Executor>(exec), parameters());
         }
 
@@ -443,7 +443,7 @@ namespace hpx { namespace execution {
         template <typename... Parameters>
         constexpr decltype(auto) with(Parameters&&... params) const
         {
-            return hpx::parallel::execution::create_rebound_policy::call(*this,
+            return hpx::parallel::execution::create_rebound_policy(*this,
                 executor(),
                 parallel::execution::join_executor_parameters(
                     std::forward<Parameters>(params)...));
@@ -475,7 +475,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -563,7 +563,7 @@ namespace hpx { namespace execution {
 #endif
                 "hpx::traits::is_executor_any<Executor>::value");
 
-            return hpx::parallel::execution::create_rebound_policy::call(
+            return hpx::parallel::execution::create_rebound_policy(
                 *this, std::forward<Executor_>(exec), parameters());
         }
 
@@ -585,7 +585,7 @@ namespace hpx { namespace execution {
         template <typename... Parameters_>
         constexpr decltype(auto) with(Parameters_&&... params) const
         {
-            return hpx::parallel::execution::create_rebound_policy::call(*this,
+            return hpx::parallel::execution::create_rebound_policy(*this,
                 executor(),
                 parallel::execution::join_executor_parameters(
                     std::forward<Parameters_>(params)...));
@@ -634,7 +634,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -728,7 +728,7 @@ namespace hpx { namespace execution {
 #endif
                 "hpx::traits::is_executor_any<Executor>::value");
 
-            return hpx::parallel::execution::create_rebound_policy::call(
+            return hpx::parallel::execution::create_rebound_policy(
                 *this, std::forward<Executor>(exec), parameters());
         }
 
@@ -750,7 +750,7 @@ namespace hpx { namespace execution {
         template <typename... Parameters>
         constexpr decltype(auto) with(Parameters&&... params) const
         {
-            return hpx::parallel::execution::create_rebound_policy::call(*this,
+            return hpx::parallel::execution::create_rebound_policy(*this,
                 executor(),
                 parallel::execution::join_executor_parameters(
                     std::forward<Parameters>(params)...));
@@ -782,7 +782,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -868,7 +868,7 @@ namespace hpx { namespace execution {
 #endif
                 "hpx::traits::is_executor_any<Executor>::value");
 
-            return hpx::parallel::execution::create_rebound_policy::call(
+            return hpx::parallel::execution::create_rebound_policy(
                 *this, std::forward<Executor_>(exec), parameters());
         }
 
@@ -890,7 +890,7 @@ namespace hpx { namespace execution {
         template <typename... Parameters_>
         constexpr decltype(auto) with(Parameters_&&... params) const
         {
-            return hpx::parallel::execution::create_rebound_policy::call(*this,
+            return hpx::parallel::execution::create_rebound_policy(*this,
                 executor(),
                 parallel::execution::join_executor_parameters(
                     std::forward<Parameters_>(params)...));
@@ -940,7 +940,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -1026,7 +1026,7 @@ namespace hpx { namespace execution {
 #endif
                 "hpx::traits::is_executor_any<Executor>::value");
 
-            return hpx::parallel::execution::create_rebound_policy::call(
+            return hpx::parallel::execution::create_rebound_policy(
                 *this, std::forward<Executor>(exec), parameters());
         }
 
@@ -1047,7 +1047,7 @@ namespace hpx { namespace execution {
         template <typename... Parameters>
         constexpr decltype(auto) with(Parameters&&... params) const
         {
-            return hpx::parallel::execution::create_rebound_policy::call(*this,
+            return hpx::parallel::execution::create_rebound_policy(*this,
                 executor(),
                 parallel::execution::join_executor_parameters(
                     std::forward<Parameters>(params)...));
@@ -1079,7 +1079,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -1167,7 +1167,7 @@ namespace hpx { namespace execution {
 #endif
                 "hpx::traits::is_executor_any<Executor>::value");
 
-            return hpx::parallel::execution::create_rebound_policy::call(
+            return hpx::parallel::execution::create_rebound_policy(
                 *this, std::forward<Executor_>(exec), parameters());
         }
 
@@ -1188,7 +1188,7 @@ namespace hpx { namespace execution {
         template <typename... Parameters_>
         constexpr decltype(auto) with(Parameters_&&... params) const
         {
-            return hpx::parallel::execution::create_rebound_policy::call(*this,
+            return hpx::parallel::execution::create_rebound_policy(*this,
                 executor(),
                 parallel::execution::join_executor_parameters(
                     std::forward<Parameters_>(params)...));
@@ -1237,7 +1237,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -1314,7 +1314,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
@@ -1389,7 +1389,7 @@ namespace hpx { namespace execution {
         }
 
     private:
-        friend struct hpx::parallel::execution::create_rebound_policy;
+        friend struct hpx::parallel::execution::create_rebound_policy_t;
         friend class hpx::serialization::access;
 
         template <typename Archive>
