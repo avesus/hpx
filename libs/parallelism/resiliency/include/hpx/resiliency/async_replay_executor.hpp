@@ -240,7 +240,7 @@ namespace hpx { namespace resiliency { namespace experimental {
         )>
 #endif
     // clang-format on
-    decltype(auto) tag_invoke(async_replay_validate_t, Executor&& exec,
+    decltype(auto) tag_dispatch(async_replay_validate_t, Executor&& exec,
         std::size_t n, Pred&& pred, F&& f, Ts&&... ts)
     {
         using result_type =
@@ -271,7 +271,7 @@ namespace hpx { namespace resiliency { namespace experimental {
         )>
 #endif
     // clang-format on
-    decltype(auto) tag_invoke(
+    decltype(auto) tag_dispatch(
         async_replay_t, Executor&& exec, std::size_t n, F&& f, Ts&&... ts)
     {
         using result_type =
